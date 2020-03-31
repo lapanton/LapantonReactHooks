@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Routes from 'routes';
-import { BrowserRouter as Router } from "react-router-dom";
-import TopBar from 'components/topBar';
-import {CurrentUserProvider} from 'contexts/currentUser';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
+
+import Routes from 'routes'
+import Topbar from 'components/topbar'
+import {CurrentUserProvider} from 'contexts/currentUser'
 import CurrentUserChecker from 'components/currentUserChecker'
 
 const App = () => {
@@ -11,7 +12,7 @@ const App = () => {
     <CurrentUserProvider>
       <CurrentUserChecker>
         <Router>
-          <TopBar/>
+          <Topbar />
           <Routes />
         </Router>
       </CurrentUserChecker>
@@ -19,4 +20,4 @@ const App = () => {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
